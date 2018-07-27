@@ -40,7 +40,7 @@ Requires Python 2 for now.
 Use the tool to pass the OAuth2 authentication
 
 ### Usage
-```bash
+```text
 usage: gdauth.py [-h] [-r {local,oob}] secret_file
 
 gdauth v0.0.1 - Google Drive OAuth2 authentication tool - gdcmdtools (Google Drive command line tools)
@@ -50,10 +50,10 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-    -r {local,oob}, --redirect_uri {local,oob}
-                            specify the redirect URI for the oauth2 flow, could be:
-			                            local: means "http://localhost"
-						                            oob: (default) means "urn:ietf:wg:oauth:2.0:oob"
+  -r {local,oob}, --redirect_uri {local,oob}
+                        specify the redirect URI for the oauth2 flow, could be:
+			  local: means "http://localhost"
+			  oob: (default) means "urn:ietf:wg:oauth:2.0:oob"
 ```
 
 ### Examples for gdauth
@@ -63,7 +63,8 @@ gdauth.py /tmp/client_secrets.json   # Use the /tmp/client_secrets.json as secre
 
 That's all.
 
-You can see this demo video in Tamil with English Subtitles to setup the gdcmdtools.
-https://www.youtube.com/watch?v=PH9TnD67oj4&feature=youtu.be
+You can see this demo video in Tamil with English Subtitles to setup the gdcmdtools:
+
+<https://www.youtube.com/watch?v=PH9TnD67oj4&feature=youtu.be>
 
 
