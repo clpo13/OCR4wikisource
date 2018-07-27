@@ -1,7 +1,7 @@
 INSTALL
 =======
 
-Just run the below command
+On Debian or Ubuntu, just run the below command
 
 ```bash
 bash ./setup.sh
