@@ -1,24 +1,26 @@
-# Version
+# OCR4Wikisource
+
+## Version
 
 1.54
 
-# Note
+## Note
 
-This program is evolving heavily.
-Always use the latest version.
-Compare the version number above with yours.
+This program is evolving heavily. Always use the latest version. Compare the version number above with yours.
 
 Feel free to report any errors in the issues section.
 
-# OCR4wikisource
+Also note that some of the Python requirements only work with Python 2. Python 3 is not supported at this time.
 
-There are many PDF files and DJVU files in WikiSource in various languages.
-In many wikisource projects, those files are splited into individual page as an Image, using proofRead extension.
+## Overview
+
+There are many PDF files and DJVU files in Wikisource in various languages.
+In many Wikisource projects, those files are splited into individual page as an Image, using proofRead extension.
 
 Contributors see those images and type them manually.
 
-This project helps the wikisource team to OCR the entire PDF or DJVU file, using the google drive OCR.
-Then it will update the relevant page in the wikisource with the text.
+This project helps the Wikisource team to OCR the entire PDF or DJVU file, using the google drive OCR.
+Then it will update the relevant page in the Wikisource with the text.
 
 The OCR will not give 100% correct text. But still, it is better than typing entire page manually.
 
@@ -26,13 +28,11 @@ To run this, you need a GNU/Linux system. Sorry Windows guys. It uses the comman
 
 Check the file [INSTALL](INSTALL.md) for installation instructions.
 
-config.ini
-==========
+## config.ini
 
-Edit this file and fill the details as `file_url`, `columns`, `wiki_username`, `wiki_password`, `wikisource_language_code`.
+Edit this file and fill the details as `file_url`, `columns`, `wiki_username`, `wiki_password`, `Wikisource_language_code`.
 
-do_ocr.py
-========
+## do_ocr.py
 
 Run this as
 
@@ -50,44 +50,31 @@ This will do the following things.
 * Download the OCRed text
 * split, merge the text files properly to fit as the PDF files
 
+This will give text files as `text_for_page_00001.txt` etc equivalent to the number of pages in the PDF file.
 
-This will give text files as 'text_for_page_00001.txt' etc equvalent to the no of pages in the PDF file.
+## mediawiki_uploader.py
 
-
-mediawiki_uploader.py
-=====================
-
-run as
+Run as
 
 ```bash
-python mediawiki_uploader.py
+python2 mediawiki_uploader.py
 ```
 
-This uploads the text files provided by do_ocr.py to the wikisource details you provided in config.ini
+This uploads the text files provided by `do_ocr.py` to the Wikisource details you provided in `config.ini`.
 
-For testing you can keep only few files provided by do_ocr.py (example from text_for_page_00001.txt to text_for_page_00005.txt)
-Move all other text files to another folder.
-Once you are satisfied, you can place all the files in the current folder.
+For testing, you can keep only few files provided by `do_ocr.py` (example from `text_for_page_00001.txt` to `text_for_page_00005.txt`). Move all other text files to another folder. Once you are satisfied, you can place all the files in the current folder.
 
-For this, the PDF or DJVU file should be already splitted into individual pages in wiki souce, using Proofread extension for wikisource.
+For this, the PDF or DJVU file should be already split into individual pages in Wikisource, using Proofread extension for Wikisource.
 
 Example:  `"https://" + wikisource_language_code + ".wikisource.org/wiki/Page:" + filename/pageno`
 
-Contact your wikisource team for splitting the files into individual pages.
+Contact your Wikisource team for splitting the files into individual pages.
 
-
-
-
-
-ToDo:
-====
-
+## To do
 
 * This program uplads single page PDF to google drive. Google accepts 10 page PDF files. Create 10 page pdf files, upload, split the text files for faster operations.
 * Give a web interface using Django or Flask.
 * Port to other Operating Systems like Windows.
 
-
-
-
 Contact : T Shrinivasan <tshrinivasan@gmail.com>
+
