@@ -3,14 +3,19 @@ INSTALL
 
 Just run the below command
 
-```
+```bash
 bash ./setup.sh
+```
+
+or
+
+```bash
+chmod +x setup.sh && ./setup.sh
 ```
 
 This will install all the required packages.
 
-
-
+Requires Python 2 for now.
 
 # API Setup
  * Create a new project for this tool to access your Google drive

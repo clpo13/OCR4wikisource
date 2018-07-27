@@ -1,16 +1,16 @@
 # Version
+
 1.54
 
-#Note
+# Note
+
 This program is evolving heavily.
 Always use the latest version.
-Compare the version number with your's version.
+Compare the version number above with yours.
 
 Feel free to report any errors in the issues section.
 
-
 # OCR4wikisource
-
 
 There are many PDF files and DJVU files in WikiSource in various languages.
 In many wikisource projects, those files are splited into individual page as an Image, using proofRead extension.
@@ -24,22 +24,19 @@ The OCR will not give 100% correct text. But still, it is better than typing ent
 
 To run this, you need a GNU/Linux system. Sorry Windows guys. It uses the commandline utilities available in GNU/Linux heavily.
 
-
-Check the file INSTALL for installation instructions
-
-
+Check the file [INSTALL](INSTALL.md) for installation instructions.
 
 config.ini
 ==========
 
-Edit this file and fill the details as file_url, columns, wiki_usernmae, wiki_password, wikisource_language_code
+Edit this file and fill the details as `file_url`, `columns`, `wiki_username`, `wiki_password`, `wikisource_language_code`.
 
 do_ocr.py
 ========
 
 Run this as
 
-```
+```bash
 python do_ocr.py
 ```
 
@@ -62,7 +59,7 @@ mediawiki_uploader.py
 
 run as
 
-```
+```bash
 python mediawiki_uploader.py
 ```
 
@@ -72,12 +69,9 @@ For testing you can keep only few files provided by do_ocr.py (example from text
 Move all other text files to another folder.
 Once you are satisfied, you can place all the files in the current folder.
 
-
 For this, the PDF or DJVU file should be already splitted into individual pages in wiki souce, using Proofread extension for wikisource.
 
-```
-Example :  "https://" + wikisource_language_code + ".wikisource.org/wiki/Page:" + filename/pageno
-```
+Example:  `"https://" + wikisource_language_code + ".wikisource.org/wiki/Page:" + filename/pageno`
 
 Contact your wikisource team for splitting the files into individual pages.
 
